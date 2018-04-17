@@ -1,0 +1,21 @@
+version: '3'
+services:
+  an:
+    build: .
+    command: /bin/bash -c "source /home/pyuser/anaconda/bin/activate root && /home/pyuser/anaconda/bin/anaconda-navigator"
+    volumes:
+      - .:/python-workshop
+    ports:
+      - "8887:8887"
+
+  jupyter:
+    build: .
+    command: /bin/bash -c "/home/pyuser/anaconda/bin/jupyter notebook --notebook-dir=/home/pyuser/python-workshop --ip='*' --port=8888 --no-browser"
+    volumes:
+      - .:/home/pyuser/python-workshop
+    ports:
+      - "8888:8888"
+
+  repl:
+    build: .
+    command: /bin/bash -c /opt/conda/bin/python
