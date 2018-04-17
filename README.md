@@ -14,10 +14,13 @@ The purpose of this repository is to simplify the process of installing the basi
       $ docker pull conradwt/python-workshop
       ```
 
+      Note:  The compressed image is roughly about 1 GB is size.
+
     - From Flash Drive
 
       ```
-      $ docker load 
+      $ docker load < python-workshop-1.0.0.tar.gz
+      ```
 
   - [Git](https://git-scm.com)
 
