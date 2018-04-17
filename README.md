@@ -6,7 +6,18 @@ The purpose of this repository is to simplify the process of installing the basi
 
   - [Docker Community Edition](https://www.docker.com/community-edition)
 
-  - [Python Workshop Image](https://hub.docker.com/conradwt/)
+  - [Python Workshop Image](https://hub.docker.com/r/conradwt/python-workshop/)
+
+    - From Internet
+
+      ```
+      $ docker pull conradwt/python-workshop
+      ```
+
+    - From Flash Drive
+
+      ```
+      $ docker load 
 
   - [Git](https://git-scm.com)
 
