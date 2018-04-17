@@ -59,8 +59,8 @@ $ git clone https://www.github.com/conradwt/python-workshop
     $ exit
     ```
 
-  Note:  One can use any editor within the current host operating system directory to edit
-         and run Python applications within the Docker container.
+  Note:  One can use any editor within the current host operating system (OS) directory to 
+         edit and run Python files and applications within the guest OS (i.e. Ubuntu).
 
 ## Support
 
