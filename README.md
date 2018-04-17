@@ -18,15 +18,49 @@ $ git clone https://www.github.com/conradwt/python-workshop
 
 ## Using Jupyter Notebooks
 
-```
-$ docker-compose up jupyter
-```
+  - Start Jupyter
 
-## Using Python REPL
+    ```
+    $ docker-compose up jupyter -d
+    ```
 
-```
-$ docker-compose up repl
-```
+  - Stop Jupyter
+
+    ```
+    $ docker-compose down
+    ```
+
+## Using Python Read-Eval-Print-Loop (REPL)
+
+
+  - Start Python REPL
+
+    ```
+    $ docker run --rm -it -v ${PWD}:/home/pyuser/python-workshop conradwt/python-workshop:1.0.0 /bin/bash -c python
+    ```
+
+  - Stop Python REPL
+
+    ```
+    ^D
+    ```
+
+## Using Ubuntu Enviornment
+
+  - Start Ubuntu Environment
+
+    ```
+    $ docker run --rm -it -v ${PWD}:/home/pyuser/python-workshop conradwt/python-workshop:1.0.0 /bin/bash
+    ```
+
+  - Stop Ubuntu Environment
+
+    ```
+    $ exit
+    ```
+
+  Note:  One can use any editor within the current host operating system directory to edit
+         and run Python applications within the Docker container.
 
 ## Support
 
