@@ -1,5 +1,5 @@
 # FROM debian:latest
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 LABEL maintainer="Conrad Taylor <conradwt@gmail.com>"
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
