@@ -19,7 +19,7 @@ The purpose of this repository is to simplify the process of installing the basi
     - From Flash Drive
 
       ```
-      $ docker load < python-workshop-1.0.0.tar.gz
+      $ docker load < python-workshop-1.1.0.tar.gz
       ```
 
   - [Git](https://git-scm.com)
@@ -50,7 +50,7 @@ $ git clone https://www.github.com/conradwt/python-workshop
   - Start Python REPL
 
     ```
-    $ docker run --rm -it -v ${PWD}:/home/pyuser/python-workshop conradwt/python-workshop:1.0.0 /bin/bash -c python
+    $ docker run --rm -it -v ${PWD}:/home/pyuser/python-workshop conradwt/python-workshop:1.1.0 /bin/bash -c python
     ```
 
   - Stop Python REPL
@@ -64,7 +64,7 @@ $ git clone https://www.github.com/conradwt/python-workshop
   - Start Ubuntu Environment
 
     ```
-    $ docker run --rm -it -v ${PWD}:/home/pyuser/python-workshop conradwt/python-workshop:1.0.0 /bin/bash
+    $ docker run --rm -it -v ${PWD}:/home/pyuser/python-workshop conradwt/python-workshop:1.1.0 /bin/bash
     ```
 
   - Stop Ubuntu Environment
