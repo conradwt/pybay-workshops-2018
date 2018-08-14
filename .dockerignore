@@ -1,4 +1,8 @@
-.gitignore
+.*
+.md
+!README.md
 build.sh
 release.sh
 VERSION
+Makefile
+Dockerfile

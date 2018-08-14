@@ -1,8 +1,9 @@
 version: '3'
 services:
-  jupyter:
+  jupyter_lab:
     build: .
-    command: /bin/bash -c "/home/pyuser/anaconda/bin/jupyter notebook --notebook-dir=/home/pyuser/python-workshop --ip='*' --port=8888 --no-browser"
+    # command: /bin/bash -c "/home/pyuser/anaconda/bin/jupyter notebook --notebook-dir=/home/pyuser/python-workshop --ip='*' --port=8888 --no-browser"
+    command: /bin/bash -c '/home/pyuser/anaconda/bin/jupyter lab --ip=* --port=8888 --no-browser --notebook-dir=/home/pyuser/python-workshop --allow-root'
     volumes:
       - .:/home/pyuser/python-workshop
     ports:

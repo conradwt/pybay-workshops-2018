@@ -3,11 +3,38 @@ LABEL maintainer="Conrad Taylor <conradwt@gmail.com>"
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
-RUN apt-get -qq update --fix-missing -y && apt-get -qq install -y wget bzip2 ca-certificates \
-  libglib2.0-0 libxext6 libsm6 libxrender1 git mercurial subversion sudo \
-  autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev \
-  zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev \
-  curl grep sed dpkg
+RUN apt-get -qq update -y && apt-get -qq install -y \
+  apt-transport-https \
+  apt-utils \
+  autoconf \
+  bison \
+  build-essential \
+  bzip2 \
+  ca-certificates \
+  curl \
+  dpkg \
+  git \
+  grep \
+  libbz2-dev \
+  libffi-dev \
+  libgdbm-dev \
+  libgdbm5 \
+  libglib2.0-0 \
+  libncurses5-dev \
+  libreadline6-dev \
+  libsm6 \
+  libsqlite3-dev \
+  libssl-dev \
+  libxext6 \
+  libxrender1 \
+  libyaml-dev \
+  mercurial \
+  sed \ 
+  sqlite3 \
+  subversion \
+  sudo \
+  wget \
+  zlib1g-dev
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
   apt-get -qq update -y && apt-get -qq install -y nodejs && \
@@ -30,8 +57,11 @@ RUN wget --quiet https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.
   /bin/bash ~/anaconda.sh -b -p /home/pyuser/anaconda && \
   rm ~/anaconda.sh && \
   echo ". /home/pyuser/anaconda/etc/profile.d/conda.sh" >> ~/.bashrc && \
-  echo "conda activate base" >> ~/.bashrc && \
-  /home/pyuser/anaconda/bin/pip install --upgrade pip && \
+  echo "conda activate base" >> ~/.bashrc
+
+RUN /home/pyuser/anaconda/bin/pip install --upgrade pip tensorflow && \
+  /home/pyuser/anaconda/bin/pip install --upgrade pip bokeh==0.13 && \
+  /home/pyuser/anaconda/bin/bokeh sampledata && \
   /home/pyuser/anaconda/bin/conda install -c conda-forge jupyterlab
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
