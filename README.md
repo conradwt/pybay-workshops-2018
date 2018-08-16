@@ -16,7 +16,7 @@ The purpose of this repository is to simplify the process of installing the basi
 
     Note: The compressed image is roughly about 1 GB is size.
 
-  - From Flash Drive (MAY NOT BE AVAIALABLE)
+  - From Flash Drive (MAY NOT BE AVAILABLE)
 
     ```
     $ docker load < pybay-workshops-2018-latest.tar.gz
