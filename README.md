@@ -38,7 +38,7 @@ $ git clone https://www.github.com/conradwt/pybay-workshops-2018
 - Starting Python REPL
 
   ```
-  $ docker run --rm -it -v ${PWD}:/home/pyuser conradwt/pybay-workshops-2018 /bin/bash -c python
+  $ docker run --rm -it -v ${PWD}:/home/pyuser/pybay-workshops-2018 conradwt/pybay-workshops-2018 /bin/bash -c python
   ```
 
 - Exiting Python REPL
@@ -52,7 +52,7 @@ $ git clone https://www.github.com/conradwt/pybay-workshops-2018
 - Starting Ubuntu Environment
 
   ```
-  $ docker run --rm -it -v ${PWD}:/home/pyuser conradwt/pybay-workshops-2018 /bin/bash
+  $ docker run --rm -it -v ${PWD}:/home/pyuser/pybay-workshops-2018 conradwt/pybay-workshops-2018 /bin/bash
   ```
 
 - Exiting Ubuntu Environment
