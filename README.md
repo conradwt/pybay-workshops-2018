@@ -4,7 +4,7 @@ The purpose of this repository is to simplify the process of installing the basi
 
 ## Software Installation Requirements
 
-- [Docker Community Edition](https://www.docker.com/community-edition)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 - [Python Workshop Image](https://hub.docker.com/r/conradwt/pybay-workshops-2018)
 
