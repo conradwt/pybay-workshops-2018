@@ -1,17 +1,17 @@
 version: "3"
 services:
-  jupyter:
+  jupyter_note:
     build: .
-    command: "/home/pyuser/anaconda/bin/jupyter notebook \
-      --notebook-dir=/home/pyuser --ip='*' --port=8080 --no-browser --allow-root"
+    command: /bin/bash -c "/home/pyuser/anaconda/bin/jupyter notebook \
+      --notebook-dir=/home/pyuser --ip='127.0.0.1' --port=8888 --no-browser --allow-root"
     volumes:
       - .:/home/pyuser
     ports:
-      - "8080:8080"
+      - "8888:8888"
 
   jupyter_lab:
     build: .
-    command: start-notebook.sh --NotebookApp.notebook_dir=./notebooks
+    command: jupyter lab
     volumes:
       - .:/home/pyuser
     ports:
