@@ -38,7 +38,7 @@ $ git clone https://www.github.com/conradwt/pybay-workshops-2018
 - Starting Python REPL
 
   ```
-  docker run --rm -it -v ${PWD}:/home/pyuser conradwt/pybay-workshops-2018 /bin/bash -c python
+  docker run --rm -it -v ${PWD}:/home/pyuser/pybay-workshops-2018 conradwt/pybay-workshops-2018 /bin/bash -c python
   ```
 
 - Exiting Python REPL
@@ -54,7 +54,7 @@ $ git clone https://www.github.com/conradwt/pybay-workshops-2018
   - macOS or Linux
 
     ```
-    docker run --rm -it -v ${PWD}:/home/pyuser conradwt/pybay-workshops-2018 /bin/bash
+    docker run --rm -it -v ${PWD}:/home/pyuser/pybay-workshops-2018 conradwt/pybay-workshops-2018 /bin/bash
     ```
 
   - Windows
@@ -62,13 +62,13 @@ $ git clone https://www.github.com/conradwt/pybay-workshops-2018
     - PowerShell
 
       ```
-      docker run --rm -it -v ${PWD}:/home/pyuser conradwt/pybay-workshops-2018 /bin/bash
+      docker run --rm -it -v ${PWD}:/home/pyuser/pybay-workshops-2018 conradwt/pybay-workshops-2018 /bin/bash
       ```
 
     - Command Line (cmd)
 
       ```
-      docker run --rm -it -v %cd%:/home/pyuser conradwt/pybay-workshops-2018 /bin/bash
+      docker run --rm -it -v %cd%:/home/pyuser/pybay-workshops-2018 conradwt/pybay-workshops-2018 /bin/bash
       ```
 
 * Exiting Ubuntu Environment
