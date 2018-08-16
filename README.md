@@ -14,7 +14,7 @@ The purpose of this repository is to simplify the process of installing the basi
     $ docker pull conradwt/pybay-workshops-2018
     ```
 
-    Note: The compressed image is roughly about 1 GB is size.
+    Note: The compressed image is roughly about 2 GB is size.
 
   - From Flash Drive (MAY NOT BE AVAILABLE)
 
