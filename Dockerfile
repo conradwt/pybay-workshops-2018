@@ -40,7 +40,8 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
   apt-get -qq update -y && apt-get -qq install -y nodejs && \
   curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
-  apt-get -qq update -y && apt-get -qq install -y yarn
+  apt-get -qq update -y && apt-get -qq install -y yarn && \
+  npm install -g configurable-http-proxy
 
 RUN TINI_VERSION=`curl https://github.com/krallin/tini/releases/latest | grep -o "/v.*\"" | sed 's:^..\(.*\).$:\1:'` && \
   curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb && \
@@ -59,10 +60,9 @@ RUN wget --quiet https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.
   echo ". /home/pyuser/anaconda/etc/profile.d/conda.sh" >> ~/.bashrc && \
   echo "conda activate base" >> ~/.bashrc
 
-RUN /home/pyuser/anaconda/bin/pip install --upgrade pip tensorflow jupyter && \
+RUN /home/pyuser/anaconda/bin/pip install --upgrade pip tensorflow jupyter jupyterlab && \
   /home/pyuser/anaconda/bin/pip install --upgrade pip bokeh==0.13 && \
-  /home/pyuser/anaconda/bin/bokeh sampledata && \
-  /home/pyuser/anaconda/bin/conda install -c conda-forge jupyterlab
+  /home/pyuser/anaconda/bin/bokeh sampledata
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]

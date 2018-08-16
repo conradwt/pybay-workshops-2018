@@ -30,20 +30,6 @@ The purpose of this repository is to simplify the process of installing the basi
 $ git clone https://www.github.com/conradwt/pybay-workshops-2018
 ```
 
-## Using Jupyter Notebooks
-
-- Starting Jupyter
-
-  ```
-  $ docker-compose up jupyter -d
-  ```
-
-- Stopping Jupyter
-
-  ```
-  $ docker-compose down
-  ```
-
 ## Using Python Read-Eval-Print-Loop (REPL)
 
 - Starting Python REPL
