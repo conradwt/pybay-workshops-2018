@@ -6,7 +6,7 @@ The purpose of this repository is to simplify the process of installing the basi
 
 - [Docker Community Edition](https://www.docker.com/community-edition)
 
-- [Python Workshop Image](https://hub.docker.com/r/conradwt/pybay-workshops-2018/)
+- [Python Workshop Image](https://hub.docker.com/r/conradwt/pybay-workshops-2018)
 
   - From Internet
 
@@ -16,7 +16,7 @@ The purpose of this repository is to simplify the process of installing the basi
 
     Note: The compressed image is roughly about 1 GB is size.
 
-  - From Flash Drive
+  - From Flash Drive (NOT AVAIALABLE)
 
     ```
     $ docker load < pybay-workshops-2018-latest.tar.gz
@@ -49,7 +49,7 @@ $ git clone https://www.github.com/conradwt/pybay-workshops-2018
 - Starting Python REPL
 
   ```
-  $ docker run --rm -it -v ${PWD}:/home/pyuser/workshops conradwt/pybay-workshops-2018 /bin/bash -c python
+  $ docker run --rm -it -v ${PWD}:/home/pyuser conradwt/pybay-workshops-2018 /bin/bash -c python
   ```
 
 - Exiting Python REPL
@@ -60,10 +60,10 @@ $ git clone https://www.github.com/conradwt/pybay-workshops-2018
 
 ## Using Ubuntu Enviornment
 
-- Entering Ubuntu Environment
+- Starting Ubuntu Environment
 
   ```
-  $ docker run --rm -it -v ${PWD}:/home/pyuser/workshops conradwt/pybay-workshops-2018 /bin/bash
+  $ docker run --rm -it -v ${PWD}:/home/pyuser conradwt/pybay-workshops-2018 /bin/bash
   ```
 
 - Exiting Ubuntu Environment

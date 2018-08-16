@@ -59,7 +59,7 @@ RUN wget --quiet https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.
   echo ". /home/pyuser/anaconda/etc/profile.d/conda.sh" >> ~/.bashrc && \
   echo "conda activate base" >> ~/.bashrc
 
-RUN /home/pyuser/anaconda/bin/pip install --upgrade pip tensorflow && \
+RUN /home/pyuser/anaconda/bin/pip install --upgrade pip tensorflow jupyter && \
   /home/pyuser/anaconda/bin/pip install --upgrade pip bokeh==0.13 && \
   /home/pyuser/anaconda/bin/bokeh sampledata && \
   /home/pyuser/anaconda/bin/conda install -c conda-forge jupyterlab
