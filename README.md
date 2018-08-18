@@ -2,6 +2,14 @@
 
 The purpose of this repository is to simplify the process of installing the basic set of tools for Python workshops.
 
+## Supported Operating Systems
+
+- macOS 10.13 or higher
+
+- Linux 16.04 or 18.04
+
+- Windows 10 Pro
+
 ## Software Installation Requirements
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
@@ -37,9 +45,17 @@ $ git clone https://www.github.com/conradwt/pybay-workshops-2018
 
 - Starting Python REPL
 
-  ```
-  docker run --rm -it -v ${PWD}:/home/pyuser/pybay-workshops-2018 conradwt/pybay-workshops-2018 /bin/bash -c python
-  ```
+  - macOS or Linux
+
+    ```
+    docker run --rm -it -v ${PWD}:/home/pyuser/pybay-workshops-2018 conradwt/pybay-workshops-2018 /bin/bash -c python
+    ```
+
+  - Windows
+
+    ```
+    docker run --rm -it -v %cd%:/home/pyuser/pybay-workshops-2018 conradwt/pybay-workshops-2018 /bin/bash -c python
+    ```
 
 - Exiting Python REPL
 

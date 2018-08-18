@@ -1,20 +1,9 @@
 version: "3"
 services:
-  jupyter_note:
+  jupyter:
     build: .
-    command: /bin/bash -c "/home/pyuser/anaconda/bin/jupyter notebook \
-      --notebook-dir=/home/pyuser --ip='127.0.0.1' --port=8888 --no-browser --allow-root"
+    command: /bin/bash -c "/home/pyuser/anaconda/bin/jupyter notebook --port=8888 --no-browser --ip=127.0.0.1 --allow-root"
     volumes:
-      - .:/home/pyuser
+      - .:/home/pyuser/notebooks
     ports:
-      - "8888:8888"
-
-  jupyter_lab:
-    build: .
-    command: jupyter lab
-    volumes:
-      - .:/home/pyuser
-    ports:
-      - "8081:8081"
-    environment:
-      - JUPYTER_ENABLE_LAB=1
+      - "127.0.0.1:8888:8888"
