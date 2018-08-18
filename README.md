@@ -54,6 +54,8 @@ The purpose of this repository is to simplify the process of installing the basi
     Note: I may be roaming around with a couple of flash drives if you haven't had the
     opportunity to install the image.
 
+## Git Installation
+
 - [Git](https://git-scm.com)
 
 ## Clone Repository
