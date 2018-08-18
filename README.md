@@ -10,9 +10,30 @@ The purpose of this repository is to simplify the process of installing the basi
 
 - Windows 10 Pro
 
-## Software Installation Requirements
+## Docker Installation
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+- Verify Installation
+
+  If you installed everything correctly, you should see a message similar to the following:
+
+  ```text
+  Unable to find image 'hello-world:latest' locally
+  latest: Pulling from library/hello-world
+  ca4f61b1923c: Pull complete
+  Digest: sha256:ca0eeb6fb05351dfc8759c20733c91def84cb8007aa89a5bf606bc8b315b9fc7
+  Status: Downloaded newer image for hello-world:latest
+
+  Hello from Docker!
+  This message shows that your installation appears to be working correctly.
+  ...
+  ```
+
+  Note: If you didn't get the above message, please do verify that Docker is running on your
+  computer system.
+
+## Download Docker Image
 
 - [Python Workshop Image](https://hub.docker.com/r/conradwt/pybay-workshops-2018)
 
